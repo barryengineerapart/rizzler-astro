@@ -1,47 +1,58 @@
-# Astro Starter Kit: Minimal
+Hi Francisco
 
-```sh
-npm create astro@latest -- --template minimal
+We need a Desktop site that is responsive and mobile.
+ * Here is the [figma for the desktop site](https://www.figma.com/proto/JBjT1WdBQmkSl4ZzNBcoMB/barryeapart-Rizzler-app?page-id=130%3A3241&node-id=136-4394&p=f&viewport=142%2C45%2C0.1&t=DHi7CwXawMFEJTpE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=136%3A4394&hide-ui=1)
+ * Here is the [figma for the mobile site](https://www.figma.com/proto/JBjT1WdBQmkSl4ZzNBcoMB/barryeapart-Rizzler-app?page-id=[…]tent-scaling=fixed&starting-point-node-id=198%3A3705&hide-ui=1)
+
+There are some things that need to happen:
+ 1. This is an AstroJS site, so you must use this technology. Look at the ASTRO_README.md to get up to speed.
+ 2. We have also installed TailWind CSS. Please use TailWind for this site.
+ 3. Copy the text exactly - but please make it easy to change.
+ 4. Please use the "centered accordion" for the FAQ stuff (see below)
+
+# Centered Accordion
 ```
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+const faqs = [
+  {
+    question: "What's the best thing about Switzerland?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  // More questions...
+]
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+export default function Example() {
+  return (
+    <div className="bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            Frequently asked questions
+          </h2>
+          <dl className="mt-16 divide-y divide-gray-900/10">
+            {faqs.map((faq) => (
+              <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
+                <dt>
+                  <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
+                    <span className="text-base/7 font-semibold">{faq.question}</span>
+                    <span className="ml-6 flex h-7 items-center">
+                      <PlusSmallIcon aria-hidden="true" className="size-6 group-data-[open]:hidden" />
+                      <MinusSmallIcon aria-hidden="true" className="size-6 group-[&:not([data-open])]:hidden" />
+                    </span>
+                  </DisclosureButton>
+                </dt>
+                <DisclosurePanel as="dd" className="mt-2 pr-12">
+                  <p className="text-base/7 text-gray-600">{faq.answer}</p>
+                </DisclosurePanel>
+              </Disclosure>
+            ))}
+          </dl>
+        </div>
+      </div>
+    </div>
+  )
+}
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
