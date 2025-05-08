@@ -1,0 +1,62 @@
+/************************************H1****************************************/
+h1 {
+    line-height: 2rem;
+}
+/******************************************************************************/
+
+/**************************************Collage*********************************/
+.imageCollageSection {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+    right: 0px; /* Move right to put right image within border */
+    width: calc(100% + 20px); /* Increase width to match right movement */
+    gap: 15px;
+    transition: width 0.3s ease;
+}
+
+.collage-img {
+    max-width: 110px;
+    width: auto;
+}
+
+.imageCollageSection .collage-img:nth-child(even) {
+    margin-top: 50px;
+}
+/*********************************************************************************/
+
+/******************************Carousel Section***********************************/
+.carouselSection {
+    margin-top: -220px;
+    z-index: 100;
+    position: relative;
+}
+/*********************************************************************************/
+
+@media (min-width: 640px) {
+    /************************************H1****************************************/
+    h1 {
+        line-height: 3rem;
+    }
+    /******************************************************************************/
+    /**************************************Collage*********************************/
+    .imageCollageSection {
+        justify-content: center;
+        gap: 20px;
+        right: 0;
+    }
+
+    .collage-img {
+        max-width: 294px;
+        width: 100%;
+    }
+    /*********************************************************************************/
+
+    /******************************Carousel Section***********************************/
+    .carouselSection {
+        margin-top: -515px;
+    }
+    /*********************************************************************************/
+}
