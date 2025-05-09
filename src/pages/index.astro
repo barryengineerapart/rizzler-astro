@@ -4,9 +4,6 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <style>
-          @import './index.css';
-        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
         <title>Rizzler</title>
@@ -14,37 +11,50 @@
     </head>
     <body class="bg-[#000B1E] text-white font-sans">
         <!-- Hero -->
-        <section class="px-4 pt-8 pb-12 bg-[#000B1E] sm:px-12 lg:px-24">
-            <img src="/public/assets/rizzlerLogo.svg" alt="Rizzler" class="w-32 h-auto mx-auto mb-4 sm:w-40" />
+        <section class="px-0 pt-8 pb-12 bg-[#000B1E]">
+            <img src="/assets/rizzlerLogo.svg" alt="Rizzler" class="w-32 h-auto mx-auto mb-4 sm:w-40" />
 
             <div class="flex justify-center">
-                <h1 class="text-xl lh-[20px] font-semibold sm:text-3xl text-center sm:text-right">
+                <h1 class="text-xl lh-[20px] font-semibold sm:text-3xl text-center sm:text-right leading-[2rem] sm:leading-[3rem]">
                     Create <span class="text-[#94FFD8]">&</span> connect <span class="text-pink-400">💖</span><br />
                     with
                     <span class="text-white">
-                        <img src="/public/assets/friendsLogo.svg" alt="friends" class="inline w-10 h-auto sm:w-20" />
+                        <img src="/assets/friendsLogo.svg" alt="friends" class="inline w-10 h-auto sm:w-20" />
                         your <br /> 🔥friends
-                        <img src="/public/assets/appStore.svg" alt="App Store" class="mt-2 sm:mt-0 mx-auto sm:inline w-32 h-auto" />
+                        <img src="/assets/appStore.svg" alt="App Store" class="mt-2 sm:mt-0 mx-auto sm:inline w-32 h-auto" />
                     </span>
                 </h1>
             </div>
 
             <p class="mt-4 text-sm sm:text-md sm:text-base text-white text-center max-w-[240px] sm:max-w-full mx-auto">
-                The <span class="underline">decentralised</span> social video app of the future, here now! 🎉
+                The <span class="underline">federated</span> social video app of the future, here now! 🎉
             </p>
 
             <!-- Collage -->
-            <div class="mt-8 flex justify-center gap-5 imageCollageSection">
-                <img src="/public/assets/collage1.png" alt="collage1" class="rounded-lg collage-img" />
-                <img src="/public/assets/collage2.png" alt="collage2" class="rounded-lg collage-img" />
-                <img src="/public/assets/collage3.png" alt="collage3" class="rounded-lg collage-img" />
-                <img src="/public/assets/collage4.png" alt="collage4" class="rounded-lg collage-img" />
-                <img src="/public/assets/collage5.png" alt="collage5" class="rounded-lg collage-img" />
+            <div
+                class="
+                    mt-8
+                    flex
+                    justify-end sm:justify-center
+                    items-start
+                    relative
+                    right-0
+                    gap-[15px] sm:gap-5
+                    transition-[width]
+                    duration-300 ease-in-out
+                    overflow-hidden
+                "
+            >
+                <img src="/assets/collage1.png" alt="collage1" class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
+                <img src="/assets/collage2.png" alt="collage2" class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
+                <img src="/assets/collage3.png" alt="collage3" class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
+                <img src="/assets/collage4.png" alt="collage4" class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
+                <img src="/assets/collage5.png" alt="collage5" class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
             </div>
         </section>
 
         <!-- Carousel Section -->
-        <section class="bg-pink-50 text-black px-4 py-12 sm:px-12 lg:px-24 text-center carouselSection">
+        <section class="bg-pink-50 text-black px-4 py-12 text-center relative z-[100] -mt-[220px] sm:-mt-[515px]">
             <h2 class="text-lg font-bold sm:text-2xl">
                 Join the unbannable short-form video platform!
             </h2>
@@ -52,21 +62,71 @@
                 All your favorite features, without the risk of losing your online presence.
             </p>
             <a href="#" class="inline-block mt-4">
-                <img src="/public/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
+                <img src="/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
             </a>
 
             <!-- Thumbnails -->
-            <div class="mt-8 grid grid-cols-3 gap-2 sm:grid-cols-6 sm:gap-4">
-                <img src="/public/assets/carousel1.png" alt="carousel1" class="rounded-md" />
-                <img src="/public/assets/carousel2.png" alt="carousel2" class="rounded-md" />
-                <img src="/public/assets/carousel3.png" alt="carousel3" class="rounded-md" />
-                <img src="/public/assets/carousel4.png" alt="carousel4" class="rounded-md" />
-                <img src="/public/assets/carousel5.png" alt="carousel5" class="rounded-md" />
-                <img src="/public/assets/carousel6.png" alt="carousel6" class="rounded-md" />
-                <img src="/public/assets/carousel7.png" alt="carousel7" class="rounded-md" />
-                <img src="/public/assets/carousel8.png" alt="carousel8" class="rounded-md" />
-                <img src="/public/assets/carousel9.png" alt="carousel9" class="rounded-md" />
-                <img src="/public/assets/carousel10.png" alt="carousel10" class="rounded-md" />
+            <div class="overflow-x-auto flex items-center gap-2 mt-[10px] sm:mt-[40px]">
+                <div>
+                    <img
+                        src="/assets/carousel1.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel2.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel3.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel4.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel5.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel6.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel7.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel8.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel9.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
+                <div>
+                    <img
+                        src="/assets/carousel10.png"
+                        class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]"
+                    />
+                </div>
             </div>
         </section>
 
@@ -99,32 +159,103 @@
             <h2 class="text-lg font-bold sm:text-2xl">What are you still doing here?</h2>
             <p class="mt-1">Come join Rizzler!</p>
             <a href="#" class="inline-block mt-4">
-                <img src="/public/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
+                <img src="/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
             </a>
         </section>
 
         <!-- FAQ -->
-        <section class="bg-white text-black px-4 py-12 sm:px-12 lg:px-24">
-            <h2 class="text-lg font-bold sm:text-2xl text-center mb-6">
-                You've got questions, we've got answers
-            </h2>
-            <div class="space-y-4">
-                <details class="border-b pb-2">
-                    <summary class="font-semibold cursor-pointer">What is the PDS Protocol?</summary>
-                    <p class="text-sm mt-1">
+        <section class="bg-white text-black px-4">
+            <div class="sm:max-w-[800px] mx-auto py-[30px] sm:py-[50px]">
+                <h2 class="font-bold text-lg text-xl sm:text-3xl text-center mb-6">
+                    You've got questions, we've got answers
+                </h2>
+                <div>
+                    <details class="group">
+                      <summary class="cursor-pointer flex justify-between items-center p-4 border-b text-md sm:text-xl font-light">
+                        What is the PDS Protocol?
+                        <span class="transition-transform duration-300 group-open:rotate-45">
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <p class="text-sm sm:text-md mt-1 py-4">
+                        The PDS (Personal Data Store) Protocol is a decentralized framework designed to give individuals control over their own data while enabling secure and seamless interactions between applications and services. It allows users to store their personal data in a private, user-controlled environment rather than relying on centralized platforms.
+                        <br/>
+                        <br/>
+                        By using standardized APIs and authentication mechanisms, the PDS Protocol ensures that users can grant or revoke access to their data as needed, promoting privacy, security, and interoperability across different services. This approach empowers individuals to manage their digital identity and share information on their own terms while reducing dependence on large tech companies that traditionally store and monetize user data.
+                      </p>
+                    </details>
+
+                    <details class="group">
+                      <summary class="cursor-pointer flex justify-between items-center p-4 border-b text-md sm:text-xl font-light">
+                        Why is Rizzler built on the PDS Protocol?
+                        <span class="transition-transform duration-300 group-open:rotate-45">
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <p class="text-sm sm:text-md mt-1 py-4">
                         The PDS Protocol is a decentralized framework that allows users to own their data in a private,
                         secure way, across multiple platforms.
-                    </p>
-                </details>
-                <details class="border-b pb-2">
-                    <summary class="font-semibold cursor-pointer">Why is Rizzler built on the PDS Protocol?</summary>
-                </details>
-                <details class="border-b pb-2">
-                    <summary class="font-semibold cursor-pointer">Can I use my Bluesky account with Rizzler?</summary>
-                </details>
-                <details class="border-b pb-2">
-                    <summary class="font-semibold cursor-pointer">What is a Public Benefit Corporation?</summary>
-                </details>
+                      </p>
+                    </details>
+
+                    <details class="group">
+                      <summary class="cursor-pointer flex justify-between items-center p-4 border-b text-md sm:text-xl font-light">
+                        Can I use my Bluesky account with Rizzler?
+                        <span class="transition-transform duration-300 group-open:rotate-45">
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <p class="text-sm sm:text-md mt-1 py-4">
+                        The PDS Protocol is a decentralized framework that allows users to own their data in a private,
+                        secure way, across multiple platforms.
+                      </p>
+                    </details>
+
+                    <details class="group">
+                      <summary class="cursor-pointer flex justify-between items-center p-4 border-b text-md sm:text-xl font-light">
+                        What is a Public Benefit Corporation?
+                        <span class="transition-transform duration-300 group-open:rotate-45">
+                          <svg
+                            class="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                          >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <p class="text-sm sm:text-md mt-1 py-4">
+                        The PDS Protocol is a decentralized framework that allows users to own their data in a private,
+                        secure way, across multiple platforms.
+                      </p>
+                    </details>
+                </div>
             </div>
         </section>
 
