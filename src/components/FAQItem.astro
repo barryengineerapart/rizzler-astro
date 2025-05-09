@@ -1,0 +1,14 @@
+---
+const { question, answer } = Astro.props;
+---
+<details class="group">
+    <summary class="cursor-pointer flex justify-between items-center p-4 border-b text-md sm:text-xl font-light">
+        {question}
+        <span class="transition-transform duration-300 group-open:rotate-45">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+        </span>
+    </summary>
+    <p class="text-sm sm:text-md mt-1 py-4" set:html={answer} />
+</details>

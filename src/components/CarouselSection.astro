@@ -1,0 +1,14 @@
+<section class="bg-pink-50 text-black px-4 py-12 text-center relative z-[100] -mt-[220px] sm:-mt-[515px]">
+    <h2 class="text-lg font-bold sm:text-2xl">Join the unbannable short-form video platform!</h2>
+    <p class="mt-2 text-sm sm:text-base">All your favorite features, without the risk of losing your online presence.</p>
+    <a href="#" class="inline-block mt-4">
+        <img src="/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
+    </a>
+    <div class="overflow-x-auto flex items-center gap-2 mt-[10px] sm:mt-[40px]">
+        {[...Array(10)].map((_, i) => (
+            <div>
+                <img src={`/assets/carousel${i + 1}.png`} class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]" />
+            </div>
+        ))}
+    </div>
+</section>
