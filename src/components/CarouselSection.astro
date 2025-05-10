@@ -4,11 +4,19 @@
     <a href="#" class="inline-block mt-4">
         <img src="/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-32 h-auto" />
     </a>
-    <div class="overflow-x-auto flex items-center gap-2 mt-[10px] sm:mt-[40px]">
+    <div class="mt-[10px] overflow-x-auto gap-2 flex items-center h-[180px] sm:h-[366px]">
         {[...Array(10)].map((_, i) => (
-            <div>
-                <img src={`/assets/carousel${i + 1}.png`} class="max-w-[127px] sm:max-w-[172px] flex-none transition-all duration-300 ease-in-out sm:hover:max-w-[260px]" />
-            </div>
+            <img
+                src={`/assets/carousel${i + 1}.png`}
+                class="
+                    w-auto
+                    flex-none
+                    transition-all duration-300
+                    h-full
+                    sm:h-[244px]
+                    sm:hover:h-full
+                "
+            />
         ))}
     </div>
 </section>
