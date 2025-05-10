@@ -1,0 +1,20 @@
+<section class="px-0 pt-8 pb-12 bg-[#000B1E]">
+    <img src="/assets/rizzlerLogo.svg" alt="Rizzler" class="w-32 h-auto mx-auto mb-4 sm:w-40" />
+    <div class="flex justify-center">
+        <h1 class="text-xl font-semibold sm:text-3xl text-center sm:text-right leading-[2rem] sm:leading-[3rem]">
+            Create <span class="text-[#94FFD8]">&</span> connect <span class="text-pink-400">💖</span><br />
+            with <span class="text-white">
+            <img src="/assets/friendsLogo.svg" alt="friends" class="inline w-10 h-auto sm:w-20" /> your <br /> 🔥friends
+            <img src="/assets/appStore.svg" alt="App Store" class="mt-2 sm:mt-0 mx-auto sm:inline w-32 h-auto" />
+            </span>
+        </h1>
+    </div>
+    <p class="mt-4 text-sm sm:text-base text-white text-center max-w-[240px] sm:max-w-full mx-auto">
+        The <span class="underline">federated</span> social video app of the future, here now! 🎉
+    </p>
+    <div class="mt-8 flex justify-end sm:justify-center items-start relative right-0 gap-[15px] sm:gap-5 overflow-hidden">
+        {[1, 2, 3, 4, 5].map(i => (
+            <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="rounded-lg max-w-[110px] w-auto sm:max-w-[294px] sm:w-full even:mt-[50px]" />
+        ))}
+    </div>
+</section>
