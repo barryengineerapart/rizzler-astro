@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        grotesque: ['"Bricolage Grotesque"', 'sans-serif'],
       },
     },
   },
