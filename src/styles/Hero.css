@@ -1,0 +1,32 @@
+.hero-image-wrapper div:first-child::after {
+    position: absolute;
+    content: url('/assets/greenStar.svg');
+    top: 0;
+    right: -3rem;
+    width: 18px;
+}
+
+.hero-image-wrapper div:nth-child(-n+3) {
+    margin-right: 30px;
+}
+
+.underline-image {
+    display: inline-block;
+    position: relative;
+    background-image: url('/assets/underline.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+@media (min-width: 640px) {
+    .hero-image-wrapper div:first-child:after {
+        width: 36px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-image-wrapper div:last-of-type {
+        z-index: 2000;
+    }
+}
