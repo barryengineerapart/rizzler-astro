@@ -1,25 +1,42 @@
-<section class="bg-pink-50 text-black px-4 py-12 text-center -mt-[15vh] sm:-mt-[20vh] lg:-mt-[30vh] xl:-mt-[35vh] relative">
+<section class="bg-white text-black px-4 py-12 text-center -mt-[10vh] sm:-mt-[20vh] lg:-mt-[30vh] xl:-mt-[35vh] relative">
     <img src="/assets/pinkStar.svg" alt="Star" class="w-[18px] sm:w-[36px] mx-auto mb-[20px]" />
-    <h2 class="font-grotesque font-extrabold text-lg sm:text-4xl w-full sm:max-w-[500px] lg:max-w-[700px] m-auto">
+    <h2 class="font-grotesque font-extrabold text-lg sm:text-[40px] w-full sm:max-w-[500px] lg:max-w-[700px] m-auto sm:leading-[3rem]">
         Join the unbannable short-form video platform!
     </h2>
     <p class="font-normal mt-2 text-sm sm:text-lg">All your favorite features, without the risk of losing your online presence.</p>
     <a href="#" class="inline-block mt-4">
         <img src="/assets/downloadOnTheAppStore.svg" alt="App Store" class="w-[197px] h-auto" />
     </a>
-    <div class="mt-[10px] overflow-x-auto gap-2 flex items-center h-[180px] sm:h-[366px]">
-        {[...Array(10)].map((_, i) => (
-            <img
-                src={`/assets/carousel${i + 1}.png`}
-                class="
-                    w-auto
-                    flex-none
-                    transition-all duration-300
-                    h-full
-                    sm:h-[244px]
-                    sm:hover:h-full
-                "
-            />
-        ))}
+    <div class="mt-[10px] sm:mt-[50px] overflow-x-auto gap-2 flex items-center">
+        {[...Array(10)].map((_, idx) => {
+            if (idx === 4) {
+                return (
+                    <video
+                        class="hidden sm:block sm:w-[200px] lg:w-[258px] h-auto rounded-md"
+                        autoplay loop muted playsinline
+                    >
+                        <source src="/assets/videoInCarousel.mp4" type="video/mp4" />
+                    </video>
+                    <img
+                        src={`/assets/carousel${idx + 1}.png`}
+                        class="
+                            w-auto
+                            h-[180px]
+                            sm:h-[244px]
+                        "
+                    />
+                )
+            }
+            return (
+                <img
+                    src={`/assets/carousel${idx + 1}.png`}
+                    class="
+                        w-auto
+                        h-[180px]
+                        sm:h-[244px]
+                    "
+                />
+            )
+        })}
     </div>
 </section>

@@ -5,8 +5,8 @@ import "../styles/Hero.css";
 <section class="px-0 pt-8 pb-12 bg-[#000B1E]">
     <div class="flex">
         <div class="flex flex-col items-center m-auto">
-            <img src="/assets/rizzlerLogo.svg" alt="Rizzler" class="w-[195px] sm:w-[250px] h-auto mb-4" />
-            <h1 class="font-grotesque text-xl font-semibold sm:text-3xl text-center leading-[2rem] sm:leading-[3rem]">
+            <img src="/assets/rizzlerLogo.svg" alt="Rizzler" class="w-[195px] sm:w-[250px] h-auto mb-4 sm:mb-10" />
+            <h1 class="font-grotesque text-xl font-semibold sm:text-[40px] text-center leading-[2rem] sm:leading-[4rem]">
                 Create <span class="text-[#94FFD8]">&</span> connect <span class="text-pink-400">💖</span><br />
                 with <span class="text-white">
                 <img src="/assets/friendsLogo.svg" alt="friends" class="inline w-10 h-auto sm:w-20" /> your <br /> 🔥friends
@@ -15,14 +15,23 @@ import "../styles/Hero.css";
             </h1>
         </div>
     </div>
-    <p class="font-light mt-4 text-sm sm:text-xl text-white text-center max-w-[240px] sm:max-w-full mx-auto">
+    <p class="font-light mt-4 text-sm sm:text-[26px] text-white text-center max-w-[240px] sm:max-w-full mx-auto">
         The <span class="underline-image pb-[5px] sm:pb-[10px]">federated</span> social video app of the future, here now! 🎉
     </p>
-    <div class="mt-8 flex items-start hero-image-wrapper relative" >
+    <div class="hero-desktop-image-wrapper hidden sm:flex flex justify-between w-full gap-[30px] mt-8" >
         {[1, 2, 3, 4, 5].map(i => (
-            <div class="relative w-full even:top-10 md:even:top-20 xl:even:top-40">
-                <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="rounded-lg w-[110px] sm:w-full" />
+            <div class="flex-1 even:top-10 md:even:top-20 xl:even:top-40 relative">
+                <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="w-full h-full object-cover rounded-2xl" />
             </div>
         ))}
+    </div>
+    <div class="block sm:hidden mt-8 relative w-full overflow-hidden h-[208px]" >
+        <div class="hero-mobile-image-wrapper absolute right-0 flex gap-[15px] min-w-max">
+            {[1, 2, 3, 4, 5].map(i => (
+                <div class="even:top-10 relative">
+                    <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="rounded-xl w-[115px] h-auto object-cover" />
+                </div>
+            ))}
+        </div>
     </div>
 </section>
