@@ -9,6 +9,13 @@
 
 /*----------------------------DESKTOP----------------------------*/
 
+.hero-desktop-image-wrapper div:nth-child(2) img,
+.hero-desktop-image-wrapper div:nth-child(3) img,
+.hero-desktop-image-wrapper div:nth-child(4) img
+{
+    border-radius: 25px;
+}
+
 .hero-desktop-image-wrapper div:nth-child(2)::after {
     position: absolute;
     content: url('/assets/greenStar.svg');

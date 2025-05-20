@@ -15,13 +15,13 @@ import "../styles/Hero.css";
             </h1>
         </div>
     </div>
-    <p class="font-light mt-4 text-sm sm:text-[26px] text-white text-center max-w-[240px] sm:max-w-full mx-auto">
+    <p class="font-light mt-4 text-sm sm:text-[26px] text-white text-center max-w-[240px] sm:max-w-full mx-auto sm:mx-[50px]">
         The <span class="underline-image pb-[5px] sm:pb-[10px]">federated</span> social video app of the future, here now! 🎉
     </p>
-    <div class="hero-desktop-image-wrapper hidden sm:flex flex justify-between w-full gap-[30px] mt-8" >
+    <div class="hero-desktop-image-wrapper hidden sm:flex flex justify-between w-full gap-[30px] mt-8 max-w-[1440px] mx-auto" >
         {[1, 2, 3, 4, 5].map(i => (
-            <div class="flex-1 even:top-10 md:even:top-20 xl:even:top-40 relative">
-                <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="w-full h-full object-cover rounded-2xl" />
+            <div class="flex-1 even:top-10 md:even:top-20 relative">
+                <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="w-full" />
             </div>
         ))}
     </div>
@@ -29,7 +29,7 @@ import "../styles/Hero.css";
         <div class="hero-mobile-image-wrapper absolute right-0 flex gap-[15px] min-w-max">
             {[1, 2, 3, 4, 5].map(i => (
                 <div class="even:top-10 relative">
-                    <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="rounded-xl w-[115px] h-auto object-cover" />
+                    <img src={`/assets/collage${i}.png`} alt={`collage${i}`} class="w-[115px] h-auto object-cover" />
                 </div>
             ))}
         </div>
