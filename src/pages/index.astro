@@ -1,19 +1,37 @@
 ---
-
+import Hero from '../components/Hero.astro';
+import CarouselSection from '../components/CarouselSection.astro';
+import Mission from '../components/Mission.astro';
+import ControlSection from '../components/ControlSection.astro';
+import CallToAction from '../components/CallToAction.astro';
+import FAQ from '../components/FAQ.astro';
+import FAQItem from '../components/FAQItem.astro';
+import Footer from '../components/Footer.astro';
+import { faqs } from "../data/faqs.js";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-		<div class="bg-white p-6 rounded-lg shadow-lg text-center">
-			<h1 class="text-2xl font-bold text-blue-600 mb-4">Tailwind is Working!</h1>
-			<p class="text-gray-700">If you can see the styling, Tailwind is set up correctly.</p>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rizzler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#000B1E] text-white font-sans">
+    <Hero />
+    <CarouselSection />
+    <Mission />
+    <ControlSection />
+    <CallToAction />
+    <FAQ>
+        {faqs.map((faq) => (
+            <FAQItem question={faq.question} answer={faq.answer} />
+        ))}
+    </FAQ>
+    <Footer />
+  </body>
 </html>

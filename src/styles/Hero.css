@@ -1,0 +1,71 @@
+.underline-image {
+    display: inline-block;
+    position: relative;
+    background-image: url('/assets/underline.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+}
+
+/*----------------------------DESKTOP----------------------------*/
+
+.hero-desktop-image-wrapper div:nth-child(2) img,
+.hero-desktop-image-wrapper div:nth-child(3) img,
+.hero-desktop-image-wrapper div:nth-child(4) img
+{
+    border-radius: 25px;
+}
+
+.hero-desktop-image-wrapper div:nth-child(2)::after {
+    position: absolute;
+    content: url('/assets/greenStar.svg');
+    top: -40px;
+    left: -20px;
+    width: 35px;
+}
+
+.hero-desktop-image-wrapper div:last-of-type {
+    z-index: 2000;
+    margin-top: 40px;
+}
+
+.hero-desktop-image-wrapper div:last-of-type::before {
+    position: absolute;
+    content: "";
+    top: -40px;
+    left: -40px;
+    width: 50px;
+    height: 60px;
+    background-image: url('/assets/imagePinkLines.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*----------------------------MOBILE----------------------------*/
+
+.hero-mobile-image-wrapper div:last-of-type img {
+    margin-top: 20px;
+}
+
+.hero-mobile-image-wrapper div:last-of-type::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    width: 25px;
+    height: 30px;
+    background-image: url('/assets/imagePinkLines.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-mobile-image-wrapper div:nth-child(2)::after {
+    position: absolute;
+    content: url('/assets/greenStar.svg');
+    top: -35px;
+    right: 0;
+    width: 18px;
+    z-index: 100;
+}
